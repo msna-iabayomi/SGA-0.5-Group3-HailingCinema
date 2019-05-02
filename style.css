@@ -52,7 +52,7 @@ html, body {
     padding-right: 20px;
   }
   .card-img-top{
-      filter: brightness(0.7);
+      filter: brightness(0.5);
   }
   .card{
       border: none;
@@ -70,12 +70,16 @@ html, body {
     margin-right: 20px;
    
 }
-.nav-link{
-    color: #ec7e22;
+
+a {
+    font-size: 18px; 
 }
+
+
 .navbar-brand{
     font-size: 25px;
 }
+
 .navbar-brand::first-letter{
     font-size: 40px;
     font-family: sans-serif;
@@ -101,4 +105,129 @@ html, body {
     color: #fff;
     
 }
+
+/* Categories */
+
+.cat-heading {
+    color: #ffffff;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.section-categories {
+    background-color:#1A1E24;
+    padding-top: 30px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-body {
+    background-color: #1A1E24;
+}
+
+.btn-cat {
+    background-color: transparent;
+    border: 1px solid #ec7e22;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    color: #ffffff;
+    display: inline-block;
+}
+
+.btn-cat:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #ec7e22;
+    border: 1px solid #ec7e22;
+}
   
+/* Plans */
+
+.section-plan {
+    padding-top: 30px;
+    padding-bottom: 30px; 
+    background-color:#1A1E24;
+}
+
+.plan-heading {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ffffff;
+}
+
+.inside-heading {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.plan-paragraph {
+    text-align: center;
+    
+}
+
+.plan {
+    background-image: linear-gradient(#ec7e22,#ec7e22), url(../SGA-0.5-Group3-HailingsCinema/img/grain.png);
+    background-blend-mode: hard-light;
+    height: 10rem;
+    background-color: #ec7e22;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    color: #ffffff;
+    
+}
+.plan-list {
+    background-color: #252a33;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 28rem;
+}
+
+.plan-list-first {
+    background-color: #252a33;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 28rem;
+}
+
+.u-list {
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.list {
+    list-style: none;
+    margin-bottom: 15px;  
+}
+
+.u-list, .price {
+    color: #ffffff;
+}
+
+.price {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+
+.btn1 {
+    background-color: #ffffff;
+    box-shadow: none;
+    border-radius: 1.0rem;
+    padding: .555rem .666rem;
+    color: #000000;
+}
+
+.btn1:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+.btn-click {
+    text-align: center;
+    margin-top: 10px;
+}
