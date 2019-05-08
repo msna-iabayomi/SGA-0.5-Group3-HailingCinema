@@ -1,419 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Hailings Cinema</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<script src="scripts/jquery.min.js"></script>
-	<script src="scripts/popper.min.js"></script>
-	<script src="scripts/bootstrap.min.js"></script>
-	<script type="text/javascript" src="scripts/all.js"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
     
-     <!-- Navigation -->
-     <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-transparent fixed-top ">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"> Hailing Cinema</a>
-                
-                 
-                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                     <span class="navbar-toggler-icon"></span>
-                 </button>
-                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                     <ul class="navbar-nav ml-auto">
-                         
-                         <li class="nav-item">
-                             <a class="nav-link text-light" href="#">Movies</a>
-                         </li>
-                         <li class="nav-item">
-                             <a class="nav-link text-light" href="#" data-toggle="modal" data-target="#myModal4">Login</a>
-                         </li>
-                         <li class="nav-item active">
-                            <a href="#"><i  class="fas fa-search search-bar"></i></a>
-                          </li>
-        
-                     </ul>
-                 </div>
-            </div>
-            </nav>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/styless/hailingscinema.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display+SC|Roboto|Satisfy"
+      rel="stylesheet"
+    />
 
-
-   <!-- - Image Slider -->
-   <div id="slides" class="carousel slide" data-ride="carousel">
-    <!-- <ul class="carousel"> -->
-        <!-- <li data-target="#slides" data-slide-to="0" class="active"></li>	 -->
-        <!-- <li data-target="#slides" data-slide-to="1"></li>	 -->
-        <!-- <li data-target="#slides" data-slide-to="2"></li> -->
-        <!-- <li data-target="#slides" data-slide-to="3"></li>	 -->
-    <!-- </ul> -->
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="images/maxresdefault3.png">
-            <div class="carousel-caption">
-                <h4 class="display-1">Movies just For You</h4>
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal5">Free Trial</button>
-                <button type="button" class="btn button-free  btn-lg" data-toggle="modal" data-target="#myModal4">Sign Up</button>
-                
+    <link
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+  </head>
+  <body>
+    <!-- Navigation -->
     
-            </div>
-        </div>
-    
-        <div class="carousel-item">
-            <img src="images/2.jpg">
-            <div class="carousel-caption">
-                    <h4 class="display-1">Movies just For You</h4>
-                    <h3></h3>
-                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal5" >Free Trial</button>
-                    <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal" data-target="#myModal4" >Sign Up</button>
-        
-                </div>
-        </div>
-    
-        <div class="carousel-item">
-            <img src="images/3.jpg">
-            <div class="carousel-caption">
-                    <h4 class="display-1">Movies just For You</h4>
-                    <h3></h3>
-                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal5" >Free Trial</button>
-                    <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal" data-target="#myModal4" >Sign Up</button>
-        
-                </div>
-        </div>
-
-        <div class="carousel-item">
-                <img src="images/4.jpg">
-                <div class="carousel-caption">
-                        <h4 class="display-1">Movies just For You</h4>
-                        <h3></h3>
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal5" >Free Trial</button>
-                        <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal" data-target="#myModal4" >Sign Up</button>
-            
+    <header>
+        <div id="my-nav">
+            <ul>
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                >&times;</a
+              >
+              <li><a href="">Featured</a></li>
+              <li><a href="">Most Popular</a></li>
+              <li><a href=""> Nollywood</a></li>
+              <li><a href=""> Bollywood</a></li>
+              <li><a href=""> Home Made</a></li>
+              <li><a href="">Family</a></li>
+              <li><a href=""> Comedy</a></li>
+              <li><a href=""> Horror</a></li>
+              <li><a href=""> Action</a></li>
+              <li><a href=""> Thriller</a></li>
+              <li><a href=""> SciFi</a></li>
+              <li><a href=""> Romance</a></li>
+              <li><a href=""> KungFu</a></li>
+              <li><a href=""> Drama</a></li>
+              <li><a href=""> Faith</a></li>
+              <li><a href=""> Classics</a></li>
+              <li><a href=""> Animation</a></li>
+              <li><a href="">Docuseries</a></li>
+              <li><a href=""> Cult Classics</a></li>
+            </ul>
+          </div>
+          <div class="login-form" id="login-form">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeInForm ()"
+              >&times;</a
+            >
+            <form action="">
+              <label for="email">
+                Your E-Mail Address
+                <input class="form-input" type="text" placeholder="Email Address" />
+              </label>
+              <label for="password">
+                Your Password
+                <input class="form-input" type="password" name="pass" id="pass" />
+              </label>
+              <input class="form-btn" type="submit" value="Login" />
+              <label for="rememberme">
+                Remember Me
+                <input class="form-radio" type="radio" name="check" id="" />
+              </label>
+            </form>
+            <a class="lost-password" href="">Lost Password</a>
+            <button onclick="openRegForm()" class="sign-login">New User</button>
+          </div>
+      
+          <div class="sign-up-form" id="reg-form">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeRegForm ()"
+              >&times;</a
+            >
+            <form action="">
+              <h4>
+                Register in few easy steps on Hailings Cinema to Watch your favorite
+                movies for free
+              </h4>
+              <label for="email">
+                Enter Your E-Mail Address
+                <input class="form-input" type="text" placeholder="Email Address" />
+              </label>
+      
+              <label for="password">
+                Choose Your Password
+                <input class="form-input" type="password" name="pass" id="pass" />
+              </label>
+              <input class="form-btn" type="submit" value="Register" />
+            </form>
+      
+            <button onclick="openInForm()"class="sign-login">Existing User</button>
+          </div>
+      
+          <div class="hailings-hero-section">
+            <header class="main-header">
+              <nav class="toggle-nav">
+                <i class="material-icons nav-icon" onclick="openNav()">
+                  view_headline
+                </i>
+              </nav>
+              <div class="logo">
+                <a href="index.html"><h1> Hailings Cinema</h1></a>
+              </div>
+              <div class="search">
+                <form action="">
+                  <input
+                    class="material-icons search-button"
+                    type="submit"
+                    value="search"
+                  />
+                  <input
+                    class="seach-bar"
+                    type="search"
+                    placeholder="Search for Movies "
+                  />
+                </form>
+              </div>
+              <div class="login">
+                <button class="reg-btn" onclick="openRegForm()">Sign Up</button>
+                <button class="login-btn" onclick="openInForm()">Login</button>
+              </div>
+            </header>
+            <!-- end of header section -->
+      <!-- - Image Slider -->
+      <div class="hailings-slide-container">
+          <div id="slides">  <!-- slide item container -->
+              <div class="slide showing">  <!-- slide item Wrapper -->
+                <img src="images/maxresdefault4.jpg" alt="" />
+                <div class="slide-movie-details">
+                  <div class="hero-contents">
+                    <div class="hcw hcw-content">
+                      <h2 >Full Cinema on the Go</h2>
+                      <h3 >Phones. Tablets. Tv</h3>
+                      <p >
+                        Thousands of movies and TV shows. Available Anywhere. Always Free.
+                      </p>
+                      <button  class="hero-btn"> <a href="single.html">Start Watching</a> </button>
                     </div>
-        </div>
-        
-<!-- Left and right controls -->
-<a class="carousel-control-prev" href="#slides" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#slides" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-
-    </div>  
+                  </div>
+              </div><!-- End of slide item Wrapper -->
+          </div><!--End of slide item container  -->
     
-    </div> 
-
-    <!-- modals -->
-
-<!-- Modal1 -->
-<div class="container modal fade " id="myModal4" tabindex="-1" role="dialog" >
-
-    <div class="modal-dialog">
-    <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <!-- <h4>Login</h4> -->
-               
-                <div class="login-form">
-                    <form action="#" method="post">
-                            <h4><center>Login</center></h4>
-                        <input type="email" name="email" placeholder="E-mail" required="">
-                        <input type="password" name="password" placeholder="Password" required="">
-                        <div class="tp">
-                            <input type="submit" value="Login">
-                        </div>
-                        <div class="forgot-grid">
-                               <div class="log-check">
-                                <label class="checkbox"><input type="checkbox" name="checkbox">Remember me</label>
-                                </div>
-                                <div class="forgot">
-                                    <a href="#" data-toggle="modal" data-target="#myModal2">Forgot Password?</a>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        
-                    </form>
+          <div id="slides">  <!-- slide item container -->
+              <div class="slide">
+                <img  id="animated-slide-left" src="images/maxresdefault.jpg" alt="" />
+                <div class="slide-movie-details">
+                  <div class="hero-contents">
+                    <div class="hcw hcw-content">
+                      <h2 >Action Packed Movies</h2>
+                      <h3 >Phones. Tablets. Tv</h3>
+                      <p >
+                        Thousands of movies and TV shows. Available Anywhere. Always Free.
+                      </p>
+                      <button  class="hero-btn"> <a href="single.html">Start Watching</a> </button>
+                  </div>
                 </div>
+              </div>
+            </div><!-- End of slide item Wrapper -->
+          </div><!--End of slide item container  -->  
+          <div class="slide">
+              <img  id="animated-slide-left" src="images/maxresdefault2.jpg" alt="" />
+              <div class="slide-movie-details">
+                <div class="hero-contents">
+                  <div class="hcw hcw-content">
+                    <h2 >Movies for the Family</h2>
+                    <h3 >No Subscription. No Cable TV</h3>
+                    <p >
+                      Thousands of movies and TV shows. Available Anywhere. Always Free.
+                    </p>
+                    <button  class="hero-btn"> <a href="single.html">Start Watching</a> </button>
+                </div>
+              </div>
             </div>
-        </div>
+          </div><!-- End of slide item Wrapper -->
+          <div class="slide">
+              <img  id="animated-slide-left" src="images/maxresdefault3.png" alt="" />
+              <div class="slide-movie-details">
+                <div class="hero-contents">
+                  <div class="hcw hcw-content">
+                    <h2 >Movies from all Genres</h2>
+                    <h3 >Comedy. Horror. Nollywood</h3>
+                    <p >
+                      Thousands of movies and TV shows. Available Anywhere. Always Free.
+                    </p>
+                    <button  class="hero-btn"> <a href="single.html">Start Watching</a> </button>
+                </div>
+              </div>
+            </div>
+          </div><!-- End of slide item Wrapper -->
+          
+          <div class="buttons">
+              <button class="controls" id="previous" title="Previous Slide">&#10094</button>
+    
+              <button class="controls" id="pause" title="Play/Pause SLide">&#10074;&#10074;</button>
+    
+              <button class="controls" id="next" title="Next Slide">&#10095</button>
+            
+          </div>
+        </div> <!-- end of section -->
+    </header>
+
+    <div class="wrapper">
+        <div class="category-title">
+            <h2> Latest Release</h2>
+ 
+     </div>
+        <div class="hailings-movie-card-wrapper ">
+          <div class="hailings-movie-card-content">
+            <div class="hailings-header-title">
+              <h3>Avengers: End Game</h3>
+            </div>
+            <header class="hailings-movie-header">
+              <div class="hailings-header-rating">
+                <p>PG 13</p>
+              </div>
+              <div class="hailings-header-star">
+                <i class="material-icons">
+                  star
+                </i>
+                <i class="material-icons">
+                  star_half
+                </i>
+                <i class="material-icons">
+                  star_border
+                </i>
+              </div>
+            </header>
+            <!-- Header contains the meta details of the movie -->
+            <section class="hailings-movie-thumb-sm">
+              <img src="assets/images/avengers.jpg" alt="Avengers" srcset="" />
+            </section>
+          </div>
+          <!-- end of movie card -->
+          <div class="hailings-movie-card-content">
+            <div class="hailings-header-title">
+              <h3>Shazam</h3>
+            </div>
+            <header class="hailings-movie-header">
+              <div class="hailings-header-rating">
+                <p>PG 13</p>
+              </div>
+              <div class="hailings-header-star">
+                <i class="material-icons">
+                  star
+                </i>
+                <i class="material-icons">
+                  star_half
+                </i>
+                <i class="material-icons">
+                  star_border
+                </i>
+              </div>
+            </header>
+            <!-- Header contains the meta details of the movie -->
+            <section class="hailings-movie-thumb-sm">
+              <img src="assets/images/shazam.jpg" alt="Avengers" srcset="" />
+            </section>
+          </div>
+          <!-- end of movie card -->
+          <div class="hailings-movie-card-content">
+            <div class="hailings-header-title">
+              <h3>Spiderman: Far from Home</h3>
+            </div>
+            <header class="hailings-movie-header">
+              <div class="hailings-header-rating">
+                <p>PG 13</p>
+              </div>
+              <div class="hailings-header-star">
+                <i class="material-icons">
+                  star
+                </i>
+                <i class="material-icons">
+                  star_half
+                </i>
+                <i class="material-icons">
+                  star_border
+                </i>
+              </div>
+            </header>
+            <!-- Header contains the meta details of the movie -->
+            <section class="hailings-movie-thumb-sm">
+              <img src="assets/images/spiderman.jpeg" alt="Avengers" srcset="" />
+            </section>
+          </div>
+          <!-- end of movie card -->
+          <div class="hailings-movie-card-content">
+            <div class="hailings-header-title">
+              <h3>X-Men: dark Pheonix</h3>
+            </div>
+            <header class="hailings-movie-header">
+              <div class="hailings-header-rating">
+                <p>PG 13</p>
+              </div>
+              <div class="hailings-header-star">
+                <i class="material-icons">
+                  star
+                </i>
+                <i class="material-icons">
+                  star_half
+                </i>
+                <i class="material-icons">
+                  star_border
+                </i>
+              </div>
+            </header>
+            <!-- Header contains the meta details of the movie -->
+            <section class="hailings-movie-thumb-sm">
+              <img src="assets/images/darkpheonix.png" alt="Avengers" srcset="" />
+            </section>
+          </div>
+          <!-- end of movie card -->
+          <div class="hailings-movie-card-content">
+            <div class="hailings-header-title">
+              <h3>Lion King</h3>
+            </div>
+            <header class="hailings-movie-header">
+              <div class="hailings-header-rating">
+                <p>PG 13</p>
+              </div>
+              <div class="hailings-header-star">
+                <i class="material-icons">
+                  star
+                </i>
+                <i class="material-icons">
+                  star_half
+                </i>
+                <i class="material-icons">
+                  star_border
+                </i>
+              </div>
+            </header>
+            <!-- Header contains the meta details of the movie -->
+            <section class="hailings-movie-thumb-sm">
+              <img src="assets/images/lionking.jpeg" alt="Avengers" srcset="" />
+            </section>
+          </div>
+          <!-- end of movie card -->
+  
+         
+      </div>
+      <!-- end of container section -->
+  
+      <div class="category-title">
+           <h2> Browse by Categories</h2>
+
     </div>
-</div>
 
 
-     </header>
+    <!--- Cards -->
+    
+  
+    <div class="container padding">
+      <div class="row padding">
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top img-thumbnail" src="images/m14.jpg" />
 
-
-
-        <!-- modalsnd -->
-        
-   <!--- Meet the team -->
-<div class="container-fluid padding">
-        <div class="row welcome text-center">
-            <div class="col-12">
-                <h1>Categories</h1>
-                <!-- <h1 class="display-4">Veiw our Gallery</h1> -->
-               </div>
-            </div>	
-            </div>     
-
-
-        <!--- Cards -->
-<div class="container padding">
-        <div class="row padding">
-            <div class="col-md-3">
-                <div class="card">
-                    
-                    <img class="card-img-top img-thumbnail" src="images/m14.jpg">
-                    
-                    <div class="text-block"> 
-                        <h4 class="card-text">Action</h4>
-                    
-                      </div>
-                    <div class="card-body">
-                           
-         <a href="#" class="btn  btn-outline-secondary collapsed" data-toggle="collapse" data-target="#demo">See Action</a>
-                        <!-- <div id="demo" class="collapse coolDude">
+            <div class="text-block">
+              <h4 class="card-text">Action</h4>
+            </div>
+            <div class="card-body">
+              <a
+                href="#"
+                class="btn  btn-outline-secondary collapsed"
+                data-toggle="collapse"
+                data-target="#demo"
+                >See Action</a
+              >
+              <!-- <div id="demo" class="collapse coolDude">
                             <h4>Timless</h4>
                             <p>Release Date: May 2018</p>
                             <p>Genres: Drama | Action </p>
                             
                                  
                                 </div> -->
+            </div>
+          </div>
+        </div>
 
-                    </div>
-                 </div>
-               </div>
-    
-               <div class="col-md-3">
-                <div class="card">
-                    <img class="card-img-top img-thumbnail" src="images/h6.jpg">
-                    <div class="text-block"> 
-                        <h4 class="card-text">Romance</h4>
-                    
-                      </div>
-                    <div class="card-body">
-                      
-                        <a href="#" class="btn  btn-outline-secondary">See Romance</a>
-                    </div>
-                 </div>
-               </div>
-    
-    
-               <div class="col-md-3">
-                <div class="card">
-                    <img class="card-img-top img-thumbnail" src="images/hr10.jpg">
-                    <div class="text-block"> 
-                        <h4 class="card-text">Horror</h4>
-                    
-                      </div>
-                    <div class="card-body">
-                        
-                        <a href="#" class="btn  btn-outline-secondary">See Horror</a>
-                    </div>
-                 </div>
-               </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top img-thumbnail" src="images/h6.jpg" />
+            <div class="text-block">
+              <h4 class="card-text">Romance</h4>
+            </div>
+            <div class="card-body">
+              <a href="#" class="btn  btn-outline-secondary">See Romance</a>
+            </div>
+          </div>
+        </div>
 
-               <div class="col-md-3">
-                    <div class="card">
-                        <img class="card-img-top img-thumbnail" src="images/m2.jpg">
-                        <div class="text-block"> 
-                            <h4 class="card-text">Drama</h4>
-                        
-                          </div>
-                        <div class="card-body">
-                            
-                            <a href="#" class="btn  btn-outline-secondary">See Drama</a>
-                        </div>
-                     </div>
-                   </div>
-             
-                   <div class="col-md-3">
-                        <div class="card">
-                            <img class="card-img-top img-thumbnail" src="images/hr7.jpg">
-                            <div class="text-block"> 
-                                <h4 class="card-text">Thriller</h4>
-                            
-                              </div>
-                            <div class="card-body">
-                                <a href="#" class="btn  btn-outline-secondary">See Thriller</a>
-                            </div>
-                         </div>
-                       </div>
-               
-                       <div class="col-md-3">
-                            <div class="card">
-                                <img class="card-img-top img-thumbnail" src="images/c8.jpg">
-                                <div class="text-block"> 
-                                    <h4 class="card-text">Comedy</h4>
-                                
-                                  </div>
-                                <div class="card-body">
-                                    <a href="#" class="btn  btn-outline-secondary">See Comedy</a>
-                                </div>
-                             </div>
-                      </div>
-                      
-                      <div class="col-md-3">
-                        <div class="card">
-                            <img class="card-img-top img-thumbnail" src="images/c2.jpg">
-                            <div class="text-block"> 
-                                <h4 class="card-text">Adventure</h4>
-                            
-                              </div>
-                            <div class="card-body">
-                                <a href="#" class="btn  btn-outline-secondary">See Adventure</a>
-                            </div>
-                         </div>
-                  </div>  
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top img-thumbnail" src="images/hr10.jpg" />
+            <div class="text-block">
+              <h4 class="card-text">Horror</h4>
+            </div>
+            <div class="card-body">
+              <a href="#" class="btn  btn-outline-secondary">See Horror</a>
+            </div>
+          </div>
+        </div>
 
-                  <div class="col-md- 3">
-                    <div class="card">
-                        <img class="card-img-top img-thumbnail" src="images/m5.jpg">
-                        <div class="text-block"> 
-                            <h4 class="card-text">Animation</h4>
-                        
-                          </div>
-                        <div class="card-body">
-                            <a href="#" class="btn  btn-outline-secondary">See Animation</a>
-                        </div>
-                     </div>
-              </div> 
-    
-              </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top img-thumbnail" src="images/m2.jpg" />
+            <div class="text-block">
+              <h4 class="card-text">Drama</h4>
+            </div>
+            <div class="card-body">
+              <a href="#" class="btn  btn-outline-secondary">See Drama</a>
+            </div>
+          </div>
+        </div>
 
-                <!--- Meet the team -->
-<div class="container-fluid padding">
-        <div class="row welcome text-center">
-            <div class="col-12">
-                <h1>Choose Plan </h1>
-                <!-- <h1 class="display-4">Veiw our Gallery</h1> -->
-               </div>
-            </div>	
-            </div>     
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top img-thumbnail" src="images/hr7.jpg" />
+            <div class="text-block">
+              <h4 class="card-text">Thriller</h4>
+            </div>
+            <div class="card-body">
+              <a href="#" class="btn  btn-outline-secondary">See Thriller</a>
+            </div>
+          </div>
+        </div>
 
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top img-thumbnail" src="images/c8.jpg" />
+            <div class="text-block">
+              <h4 class="card-text">Comedy</h4>
+            </div>
+            <div class="card-body">
+              <a href="#" class="btn  btn-outline-secondary">See Comedy</a>
+            </div>
+          </div>
+        </div>
 
-              <div class="row padding">
-                    <div class="col-md-2">
-                        <div class="card">
-                            <img class="card-img-top" src="images/t8.jpg">
-                            <div class="card-body">
-                                <!-- <h4 class="card-title">John Doe</h4>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top img-thumbnail" src="images/c2.jpg" />
+            <div class="text-block">
+              <h4 class="card-text">Adventure</h4>
+            </div>
+            <div class="card-body">
+              <a href="#" class="btn  btn-outline-secondary">See Adventure</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md- 3">
+          <div class="card">
+            <img class="card-img-top img-thumbnail" src="images/m5.jpg" />
+            <div class="text-block">
+              <h4 class="card-text">Animation</h4>
+            </div>
+            <div class="card-body">
+              <a href="#" class="btn  btn-outline-secondary">See Animation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="container-fluid padding">
+          <div class="category-title">
+          <h2>Choose a Plan</h2>
+
+   </div>
+      </div>
+
+      <div class="row padding">
+        <div class="col-md-2">
+          <div class="card">
+            <img class="card-img-top" src="images/t8.jpg" />
+            <div class="card-body">
+              <!-- <h4 class="card-title">John Doe</h4>
                                 <p class="card-text">Joe is an internet entreprenure with almost 20years of experience</p> -->
-                                <a href="#" class="btn  btn-outline-secondary">See Profile</a>
-                            </div>
-                         </div>
-                       </div>
-            
-                       <div class="col-md-2">
-                        <div class="card">
-                            <img class="card-img-top" src="images/hr8.jpg">
-                            <div class="card-body">
-                                <!-- <h4 class="card-title">Mary jo</h4>
+              <a href="#" class="btn  btn-outline-secondary">See Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="card">
+            <img class="card-img-top" src="images/hr8.jpg" />
+            <div class="card-body">
+              <!-- <h4 class="card-title">Mary jo</h4>
                                 <p class="card-text">Mary is a designer with almost 10years of digital experience</p> -->
-                                <a href="#" class="btn  btn-outline-secondary">See Profile</a>
-                            </div>
-                         </div>
-                       </div>
-            
-            
-                       <div class="col-md-2">
-                        <div class="card">
-                            <img class="card-img-top" src="images/hr10.jpg">
-                            <div class="card-body">
-                                <!-- <h4 class="card-title">Phil Ho </h4>
+              <a href="#" class="btn  btn-outline-secondary">See Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="card">
+            <img class="card-img-top" src="images/hr10.jpg" />
+            <div class="card-body">
+              <!-- <h4 class="card-title">Phil Ho </h4>
                                 <p class="card-text">Phil is a developer with over 5 years of web development experience</p> -->
-                                <a href="#" class="btn  btn-outline-secondary">See Profile</a>
-                            </div>
-                         </div>
-                       </div>
-        
-                       <div class="col-md-2">
-                            <div class="card">
-                                <img class="card-img-top" src="images/m12.jpg">
-                                <div class="card-body">
-                                    
-                                    <a href="#" class="btn  btn-outline-secondary">See Profile</a>
-                                </div>
-                             </div>
-                           </div>
-                     
-                           <div class="col-md-2">
-                                <div class="card">
-                                    <img class="card-img-top" src="images/c10.jpg">
-                                    <div class="card-body">
-                                        <a href="#" class="btn  btn-outline-secondary">See Profile</a>
-                                    </div>
-                                 </div>
-                               </div>
-                       
-                               <div class="col-md-2">
-                                    <div class="card">
-                                        <img class="card-img-top" src="images/m14.jpg">
-                                        <div class="card-body">
-                                            <a href="#" class="btn  btn-outline-secondary">See Profile</a>
-                                        </div>
-                                     </div>
-                              </div>
-        
-                        
-                        
-            
-                      </div>
-
-
-
-
-
+              <a href="#" class="btn  btn-outline-secondary">See Profile</a>
             </div>
+          </div>
+        </div>
 
-    
-    
-  <!-- Footer -->
-  <footer class="main-footer">
-		<div class="row text-center bg-dark">
-			<div class="col-lg-4">
-	         <p>Hailings cenima    <img src="img/w3newbie.png"> </p>          
-	             <hr class="light">
-	             <p>555-555-5555</p>
-	             <p>email@myemail.com</p>
-	             <p>100 Street Name</p>
-	             <p>City,State,00000</p>			
-			</div>	
-
-			<div class="col-lg-4">
-	              	<hr class="light">
-	              	<h5>Our Hours</h5>
-	              	<hr class="light">
-	              	<p>Monday:9am - 4pm</p>
-	              	<p>Saturday:10am - 4pm</p>
-	              	<p>Sunday: closed</p>
+        <div class="col-md-2">
+          <div class="card">
+            <img class="card-img-top" src="images/m12.jpg" />
+            <div class="card-body">
+              <a href="#" class="btn  btn-outline-secondary">See Profile</a>
             </div>
-            
-             <div class="col-lg-4">
-	              	<hr class="light">
-	              	<h5>Service Area</h5>
-	              	<hr class="light">
-		             <p>City,State,00000</p>	
-		             <p>City,State,00000</p>	
-		             <p>City,State,00000</p>	
-		             <p>City,State,00000</p>	
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="card">
+            <img class="card-img-top" src="images/c10.jpg" />
+            <div class="card-body">
+              <a href="#" class="btn  btn-outline-secondary">See Profile</a>
             </div>
-		              	
-                <div class="col-12">
-                	<hr class="light -100">
-                </div>
- 
-		</div>
+          </div>
+        </div>
 
-</footer>
+        <div class="col-md-2">
+          <div class="card">
+            <img class="card-img-top" src="images/m14.jpg" />
+            <div class="card-body">
+              <a href="#" class="btn  btn-outline-secondary">See Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    
-</body>
+    <!-- Footer -->
+    <footer class="main-footer mtp">
+      <div class="row text-center bg-dark">
+        <div class="col-lg-4">
+          <div class="logo">
+            <h2>Hailings Cinema</h2>
+          </div>
+          <hr class="light" />
+          <p>555-555-5555</p>
+          <p>email@myemail.com</p>
+          <p>100 Street Name</p>
+          <p>City,State,00000</p>
+        </div>
+
+        <div class="col-lg-4">
+          <hr class="light" />
+          <h5>Our Hours</h5>
+          <hr class="light" />
+          <p>Monday:9am - 4pm</p>
+          <p>Saturday:10am - 4pm</p>
+          <p>Sunday: closed</p>
+        </div>
+
+        <div class="col-lg-4">
+          <hr class="light" />
+          <h5>Service Area</h5>
+          <hr class="light" />
+          <p>City,State,00000</p>
+          <p>City,State,00000</p>
+          <p>City,State,00000</p>
+          <p>City,State,00000</p>
+        </div>
+
+        <div class="col-12">
+          <hr class="light -100" />
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script type="text/javascript" src="scripts/all.js"></script>
+  <script src="assets/scripts/hailingcinema.js"></script>
 </html>
