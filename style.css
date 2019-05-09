@@ -332,5 +332,41 @@ a:hover{
     background-color: #252A33;
 }
 
+/* modal log in and sign up modals */
+.modal-style{
+    background: #1A1E24;
+    color: #ec7e22;
+}
+.close{
+    color: #ec7e22;
+}
+.free-trial{
+    width: 299px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 5px;
+    height: 35px;
+}
+.agree-checkbox{
+    font-size: 12px;
+    margin-left: 18px;
+    margin-right: 6px;
+}
+.modal-span{
+    margin-right: 40px;
+}
+.agree-text{
+    font-size: 12px; 
+}
 
+
+form{
+    margin-top: 0px;
+}
+#try-flex{
+    margin-left: 50px;
+}
+#try-flex-text{
+    margin-left: 7.2rem;
+}
 

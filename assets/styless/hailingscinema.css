@@ -8,6 +8,7 @@ body {
   color: white;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
+
 }
 a {
   color: darkgray;
@@ -452,6 +453,69 @@ form h4 {
   text-align: center;
   line-height: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* styling the footer */
+.first-line{
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+.footer-container{
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+}
+.lower-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.footer-awesome{
+  margin: 5px;
+  padding: 2px;
+  font-size: 15px;
+  
+}
+.footer-awesome:hover{
+  color: #fff;
+}
+.p-Tag-footer{
+  margin-left: 24px;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-top: 10px;
+}
+.p-Tag-footer:hover{
+  color: #d8d8d8;
+  cursor: pointer;
+}
+.h1-divOne-footer::first-letter{
+  color: #ec7e22;
+}
+.copyright-text{
+  color: #ec7e22;
+}
+#footer-entity{
+  color: rgb(223, 10, 10);
+}
+
+.h3-divThree-footer,
+.h3-divFour-footer{
+  font-size: 15px;
+  margin-left: 24px;
+  
+}
+.h3-divTwo-footer{
+  font-size: 15px;
+}
+
+.second-line,
+.third-line,
+.fourth-line{
+ margin-bottom: 18px;
 }
 
 /* Media Querys */
