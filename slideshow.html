@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styless/hailingscinema.css">
+  </head>
+  <body>
+    <div class="hailings-slide-container">
+      <div id="slides">  <!-- slide item container -->
+          <div class="slide showing">  <!-- slide item Wrapper -->
+            <img src="images/maxresdefault4.jpg" alt="" />
+            <div class="slide-movie-details">
+              <div class="hero-contents">
+                <div class="hcw hcw-content">
+                  <h2 >Full Cinema on the Go</h2>
+                  <h3 >Phones. Tablets. Tv</h3>
+                  <p >
+                    Thousands of movies and TV shows. Available Anywhere. Always Free.
+                  </p>
+                  <button  class="hero-btn"> <a href="single.html">Start Watching</a> </button>
+                </div>
+              </div>
+          </div><!-- End of slide item Wrapper -->
+      </div><!--End of slide item container  -->
+
+      <div id="slides">  <!-- slide item container -->
+          <div class="slide">
+            <img  id="animated-slide-left" src="images/maxresdefault.jpg" alt="" />
+            <div class="slide-movie-details">
+              <div class="hero-contents">
+                <div class="hcw hcw-content">
+                  <h2 >Action Packed Movies</h2>
+                  <h3 >Phones. Tablets. Tv</h3>
+                  <p >
+                    Thousands of movies and TV shows. Available Anywhere. Always Free.
+                  </p>
+                  <button  class="hero-btn"> <a href="single.html">Start Watching</a> </button>
+              </div>
+            </div>
+          </div>
+        </div><!-- End of slide item Wrapper -->
+      </div><!--End of slide item container  -->  
+      <div class="slide">
+          <img  id="animated-slide-left" src="images/maxresdefault2.jpg" alt="" />
+          <div class="slide-movie-details">
+            <div class="hero-contents">
+              <div class="hcw hcw-content">
+                <h2 >Movies for the Whole Family</h2>
+                <h3 >No Subscription. No Cable TV</h3>
+                <p >
+                  Thousands of movies and TV shows. Available Anywhere. Always Free.
+                </p>
+                <button  class="hero-btn"> <a href="single.html">Start Watching</a> </button>
+            </div>
+          </div>
+        </div>
+      </div><!-- End of slide item Wrapper -->
+      <div class="slide">
+          <img  id="animated-slide-left" src="images/maxresdefault3.png" alt="" />
+          <div class="slide-movie-details">
+            <div class="hero-contents">
+              <div class="hcw hcw-content">
+                <h2 >Movies from all Genres</h2>
+                <h3 >Comedy. Horror. Nollywood</h3>
+                <p >
+                  Thousands of movies and TV shows. Available Anywhere. Always Free.
+                </p>
+                <button  class="hero-btn"> <a href="single.html">Start Watching</a> </button>
+            </div>
+          </div>
+        </div>
+      </div><!-- End of slide item Wrapper -->
+      
+      <div class="buttons">
+          <button class="controls" id="previous" title="Previous Slide">&#10094</button>
+
+          <button class="controls" id="pause" title="Play/Pause SLide">&#10074;&#10074;</button>
+
+          <button class="controls" id="next" title="Next Slide">&#10095</button>
+        
+      </div>
+    </div> <!-- end of section -->
+
+    
+    <style>
+      .hailings-slide-container {
+        width: 100%;
+        height: 90vh;
+      }
+      #slides {
+        position: relative;
+        height: 100%;
+        width: 100%;
+      }
+
+      .slide {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 1;
+        -webkit-transition: opacity 1s;
+        -moz-transition: opacity 1s;
+        -o-transition: opacity 1s;
+        transition: opacity 1s;
+      }
+
+      .showing {
+        opacity: 1;
+        z-index: 2;
+      }
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .controls {
+        display: none;
+      }
+
+      .slide {
+        font-size: 18px;
+
+        box-sizing: border-box;
+      }
+      .slide-movie-details {
+        color: white;
+        background: rgba(255, 255, 255, 0.2);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        text-align: center;
+        height: 100%;
+      }
+      .hcw-content{
+        position: absolute;
+        top: 60px;
+        left: 30px;
+        text-align: center;
+        border: 1px solid white;
+        padding-bottom: 20px;
+      }
+      .hcw-content p{
+          text-align: center;
+          padding-left: 20px;
+          
+
+      }
+
+      .controls {
+        color: #fff;
+        border: none;
+        padding: 10px 10px;
+        font-size: 20px;
+        cursor: pointer;
+        border: none;
+        background: rgba(255, 255, 255, 0.1)
+      }
+
+      .controls:hover,
+      .controls:focus {
+        background: rgba(255, 255, 255, 0.7)
+      }
+
+    
+      #previous{
+          left: 20px;
+          position: absolute;
+          top:40%;
+          z-index: 10;
+
+      }
+      
+      #next{
+          right: 20px;
+          position: absolute;
+          top:40%;
+          z-index: 10;
+
+      }
+      
+      #pause{
+          left: 50%;
+          position: absolute;
+          top:40%;
+          z-index: 10;
+      }
+                         
+     #animated-slide-left{
+        position: absolute;
+    left: -760px;
+        -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: .5s;
+    animation: slide 0.5s forwards;
+    animation-delay: .5s;
+    position: absolute;
+    
+     }
+     @-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}
+
+     
+     
+    </style>
+    <script>
+        function hailingsSlide(){
+      var controls = document.querySelectorAll(".controls");
+      let time =5000;
+      for (var i = 0; i < controls.length; i++) {
+        controls[i].style.display = "inline-block";
+      }
+
+      var slides = document.querySelectorAll("#slides .slide");
+      var currentSlide = 0;
+      var slideInterval = setInterval(nextSlide, time);
+
+      function nextSlide() {
+        goToSlide(currentSlide + 1);
+      }
+
+      function previousSlide() {
+        goToSlide(currentSlide - 1);
+      }
+
+      function goToSlide(n) {
+        slides[currentSlide].className = "slide";
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].className = "slide showing";
+      }
+
+      var playing = true;
+      var pauseButton = document.getElementById("pause");
+
+      function pauseSlideshow() {
+        pauseButton.innerHTML = "&#9658;"; 
+        playing = false;
+        clearInterval(slideInterval);
+      }
+
+      function playSlideshow() {
+        pauseButton.innerHTML = "&#10074;&#10074;"; 
+        playing = true;
+        slideInterval = setInterval(nextSlide, time);
+      }
+
+      pauseButton.onclick = function() {
+        if (playing) {
+          pauseSlideshow();
+        } else {
+          playSlideshow();
+        }
+      };
+
+      var next = document.getElementById("next");
+      var previous = document.getElementById("previous");
+
+      next.onclick = function() {
+        pauseSlideshow();
+        nextSlide();
+      };
+      previous.onclick = function() {
+        pauseSlideshow();
+        previousSlide();
+      };
+        }
+        window.onload(hailingsSlide())
+    </script>
+  </body>
+</html>

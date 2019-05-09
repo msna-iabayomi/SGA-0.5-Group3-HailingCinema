@@ -8,6 +8,7 @@ body {
   color: white;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 a {
   color: darkgray;
@@ -154,6 +155,13 @@ h6 {
   color: white;
   font-size: 18px;
 }
+.hero-btn:hover {
+  background: orangered;
+  opacity: 0.8;
+}
+.hero-btn a {
+  color: white;
+}
 .reg-btn {
   border: none;
   background: #d8d8d8;
@@ -168,6 +176,142 @@ h6 {
   border: none;
   cursor: pointer;
 }
+
+/* 
+Stylings for SLide show
+*/
+
+.hailings-slide-container {
+  width: 100%;
+  height: 90vh;
+}
+#slides {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.category-title {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.category-title h2 {
+  font-size: 19px;
+}
+.slide {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.showing {
+  opacity: 1;
+  z-index: 2;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.controls {
+  display: none;
+}
+
+.slide {
+  font-size: 18px;
+
+  box-sizing: border-box;
+}
+.slide-movie-details {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  height: 100%;
+}
+.hcw-content {
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  text-align: center;
+  border: 1px solid white;
+  padding-bottom: 20px;
+}
+.hcw-content p {
+  text-align: center;
+  padding-left: 20px;
+}
+
+.controls {
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.controls:hover,
+.controls:focus {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+#previous {
+  left: 20px;
+  position: absolute;
+  top: 40%;
+  z-index: 10;
+}
+
+#next {
+  right: 20px;
+  position: absolute;
+  top: 40%;
+  z-index: 10;
+}
+
+#pause {
+  left: 50%;
+  position: absolute;
+  top: 40%;
+  z-index: 10;
+}
+
+#animated-slide-left {
+  position: absolute;
+  left: -760px;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 0.5s;
+  animation: slide 0.5s forwards;
+  animation-delay: 0.5s;
+  position: absolute;
+}
+
+@-webkit-keyframes slide {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slide {
+  100% {
+    left: 0;
+  }
+}
+/* 
+End of SLide Styling */
 .hcw {
   padding-top: 30px;
   margin-left: 50px;
@@ -344,7 +488,7 @@ h6 {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 11;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
@@ -374,7 +518,7 @@ h6 {
   width: 0;
   height: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 11;
   top: 70px;
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
@@ -453,7 +597,9 @@ form h4 {
   line-height: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+.mtp {
+  margin-top: 30px;
+}
 /* Media Querys */
 
 /* Mobile */
@@ -570,6 +716,24 @@ form h4 {
   .hailings-movie-thumb-sm img {
     object-fit: fill;
   }
+  .hcw-content {
+    width: 90%;
+    left: 0;
+    border: none;
+  }
+  .hcw-content h2 {
+    font-size: 30px;
+  }
+  .hcw-content h3 {
+    font-size: 20px;
+  }
+  .hailings-slide-container {
+    height: 55vh;
+    box-sizing: border-box;
+  }
+  .hero-btn {
+    margin-left: -50px;
+  }
 }
 @media (min-width: 600px) and (max-width: 1100px) {
   .main-header {
@@ -627,10 +791,28 @@ form h4 {
     margin: 10px auto;
     width: 95%;
   }
-  .hailings-movie-card-content:last-child{
+  .hailings-movie-card-content:last-child {
     display: none;
   }
   .hailings-movie-thumb-sm img {
     object-fit: fill;
+  }
+  .hcw-content {
+    width: 90%;
+    left: -30px;
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .hcw-content h2 {
+    font-size: 30px;
+  }
+  .hcw-content h3 {
+    font-size: 20px;
+  }
+  .hailings-slide-container {
+    height: 80vh;
+  }
+  .hero-btn {
+    margin-left: -50px;
   }
 }
