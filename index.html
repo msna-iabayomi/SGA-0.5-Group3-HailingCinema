@@ -1,476 +1,655 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Hailings Cinema</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-	<script src="scripts/jquery.min.js"></script>
-	<script src="scripts/popper.min.js"></script>
-	<script src="scripts/bootstrap.min.js"></script>
-	<script type="text/javascript" src="scripts/all.js"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/popper.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/styless/hailingscinema.css" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC|Roboto|Satisfy" rel="stylesheet" />
+
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+        rel="stylesheet" />
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
 </head>
+
 <body>
-    
-     <!-- Navigation -->
-     <header>
-            <nav class="navbar navbar-expand-md navbar-dark fixed-top navscroll">
-                    <div class="container">
-                        <a class="navbar-brand" href="#"> Hailings Cinema</a>
-                        
-                         
-                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                             <span class="navbar-toggler-icon"></span>
-                         </button>
-                         <div class="collapse navbar-collapse" id="navbarResponsive">
-                             <ul class="navbar-nav ml-auto">
-                                 
-                                 <li class="nav-item">
-                                     <a class="nav-link text-light" href="#">Movies</a>
-                                 </li>
-                                 <li class="nav-item">
-                                     <a class="nav-link text-light" href="#" data-toggle="modal" data-target="#myModal4">Login</a>
-                                 </li>
-                                 <li class="nav-item active">
-                                    <a href="#"><i  class="fas fa-search search-bar"></i></a>
-                                  </li>
-                
-                             </ul>
-                         </div>
+    <!-- Navigation -->
+    <header>
+        <div id="my-nav">
+            <ul>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <li><a href="">Featured</a></li>
+                <li><a href="">Most Popular</a></li>
+                <li><a href=""> Nollywood</a></li>
+                <li><a href=""> Bollywood</a></li>
+                <li><a href=""> Home Made</a></li>
+                <li><a href="">Family</a></li>
+                <li><a href=""> Comedy</a></li>
+                <li><a href=""> Horror</a></li>
+                <li><a href=""> Action</a></li>
+                <li><a href=""> Thriller</a></li>
+                <li><a href=""> SciFi</a></li>
+                <li><a href=""> Romance</a></li>
+                <li><a href=""> KungFu</a></li>
+                <li><a href=""> Drama</a></li>
+                <li><a href=""> Faith</a></li>
+                <li><a href=""> Classics</a></li>
+                <li><a href=""> Animation</a></li>
+                <li><a href="">Docuseries</a></li>
+                <li><a href=""> Cult Classics</a></li>
+            </ul>
+        </div>
+        <div class="login-form" id="login-form">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeInForm ()">&times;</a>
+            <form action="">
+                <label for="email">
+                    Your E-Mail Address
+                    <input class="form-input" type="text" placeholder="Email Address" />
+                </label>
+                <label for="password">
+                    Your Password
+                    <input class="form-input" type="password" name="pass" id="pass" />
+                </label>
+                <input class="form-btn" type="submit" value="Login" />
+                <label for="rememberme">
+                    Remember Me
+                    <input class="form-radio" type="radio" name="check" id="" />
+                </label>
+            </form>
+            <a class="lost-password" href="">Lost Password</a>
+            <button onclick="openRegForm()" class="sign-login">New User</button>
+        </div>
+
+        <div class="sign-up-form" id="reg-form">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeRegForm ()">&times;</a>
+            <form action="">
+                <h4>
+                    Register in few easy steps on Hailings Cinema to Watch your favorite
+                    movies for free
+                </h4>
+                <label for="email">
+                    Enter Your E-Mail Address
+                    <input class="form-input" type="text" placeholder="Email Address" />
+                </label>
+
+                <label for="password">
+                    Choose Your Password
+                    <input class="form-input" type="password" name="pass" id="pass" />
+                </label>
+                <input class="form-btn" type="submit" value="Register" />
+            </form>
+
+            <button onclick="openInForm()" class="sign-login">Existing User</button>
+        </div>
+
+        <div class="hailings-hero-section">
+            <div class="main-header">
+                <div class="toggle-nav">
+                    <i class="material-icons nav-icon" onclick="openNav()">
+                        view_headline
+                    </i>
+                </div>
+                <div class="logo">
+                    <a href="index.html">
+                        <h1 class="logo-text"> Hailing Cinema</h1>
+                    </a>
+                </div>
+                <div class="search">
+                    <form action="">
+                        <input class="material-icons search-button" type="submit" value="search" />
+                        <input class="seach-bar" type="search" placeholder="Search for Movies " />
+                    </form>
+                </div>
+                <div class="login">
+                    <button class="reg-btn" onclick="openRegForm()">Sign Up</button>
+                    <button class="login-btn" onclick="openInForm()">Login</button>
+                </div>
+            </div>
+            <!-- end of header section -->
+            <!-- - Image Slider -->
+            <div class="hailings-slide-container">
+                <div id="slides">
+                    <!-- slide item container -->
+                    <div class="slide showing">
+                        <!-- slide item Wrapper -->
+                        <img src="images/maxresdefault4.jpg" alt="" />
+                        <div class="slide-movie-details">
+                            <div class="hero-contents">
+                                <div class="hcw hcw-content">
+                                    <h2>Full Cinema on the Go</h2>
+                                    <h3>Phones. Tablets. Tv</h3>
+                                    <p>
+                                        Thousands of movies and TV shows. Available Anywhere. Always Free.
+                                    </p>
+                                    <button class="hero-btn"> <a href="single.html">Start Watching</a> </button>
+                                </div>
+                            </div>
+                        </div><!-- End of slide item Wrapper -->
                     </div>
-                    </nav>
-        
-        
+                    <!--End of slide item container  -->
 
 
-   <!-- - Image Slider -->
-   <div id="slides" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="images/maxresdefault3.png">
-            <div class="carousel-caption">
-                <h4 class="display-1">Movies just For You</h4>
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal5">Free Trial</button>
-                <button type="button" class="btn button-free  btn-lg" data-toggle="modal" data-target="#myModal4">Sign Up</button>
-                
-    
-            </div>
-        </div>
-    
-        <div class="carousel-item">
-            <img src="images/2.jpg">
-            <div class="carousel-caption">
-                <h4 class="display-1">Movies just For You</h4>
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal5" >Free Trial</button>
-                <button type="button" class="btn button-free btn-lg" data-toggle="modal" data-target="#myModal4" >Sign Up</button>
-            </div>
-        </div>
-    
-        <div class="carousel-item">
-            <img src="images/3.jpg">
-            <div class="carousel-caption">
-                <h4 class="display-1">Movies just For You</h4>
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal5" >Free Trial</button>
-                <button type="button" class="btn button-free btn-lg" data-toggle="modal" data-target="#myModal4" >Sign Up</button>
-            </div>
-        </div>
+                    <div id="slides">
+                        <!-- slide item container -->
+                        <div class="slide">
+                            <img id="animated-slide-left" src="images/maxresdefault.jpg" alt="" />
+                            <div class="slide-movie-details">
+                                <div class="hero-contents">
+                                    <div class="hcw hcw-content">
+                                        <h2>Action Packed Movies</h2>
+                                        <h3>Phones. Tablets. Tv</h3>
+                                        <p>
+                                            Thousands of movies and TV shows. Available Anywhere. Always Free.
+                                        </p>
+                                        <button class="hero-btn"> <a href="single.html">Start Watching</a> </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End of slide item Wrapper -->
+                    </div>
+                    <!--End of slide item container  -->
+                    <div class="slide">
+                        <img id="animated-slide-left" src="images/maxresdefault2.jpg" alt="" />
+                        <div class="slide-movie-details">
+                            <div class="hero-contents">
+                                <div class="hcw hcw-content">
+                                    <h2>Movies for the Family</h2>
+                                    <h3>No Subscription. No Cable TV</h3>
+                                    <p>
+                                        Thousands of movies and TV shows. Available Anywhere. Always Free.
+                                    </p>
+                                    <button class="hero-btn"> <a href="single.html">Start Watching</a> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End of slide item Wrapper -->
+                    <div class="slide">
+                        <img id="animated-slide-left" src="images/maxresdefault3.png" alt="" />
+                        <div class="slide-movie-details">
+                            <div class="hero-contents">
+                                <div class="hcw hcw-content">
+                                    <h2>Movies from all Genres</h2>
+                                    <h3>Comedy. Horror. Nollywood</h3>
+                                    <p>
+                                        Thousands of movies and TV shows. Available Anywhere. Always Free.
+                                    </p>
+                                    <button class="hero-btn"> <a href="single.html">Start Watching</a> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- new form end -->
+                <!-- modal 15 -->
+                <!-- End of slide item Wrapper -->
 
-        <div class="carousel-item">
-            <img src="images/4.jpg">
-            <div class="carousel-caption">
-                <h4 class="display-1">Movies just For You</h4>
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal5" >Free Trial</button>
-                <button type="button" class="btn button-free btn-lg" data-toggle="modal" data-target="#myModal4" >Sign Up</button>
-            </div>
-        </div>
-        
-<!-- Left and right controls -->
-<a class="carousel-control-prev" href="#slides" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#slides" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
+                <div class="buttons">
+                    <button class="controls" id="previous" title="Previous Slide">&#10094</button>
 
-    </div>  
-    
-    </div> 
-
-    <!-- modals -->
-
-<!-- Modal1 -->
-<div class="container modal fade " id="myModal4" tabindex="-1" role="dialog" >
-
-    <div class="modal-dialog">
-    <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header modal-style">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                
-<div class="container ">
-       
-        <h4 class="my-modal-btn-login-text">Log in</h4>
-        <form action="#">
-          <div class="form-group">
-            <input type="text" class="form-control" id="usr" name="username" placeholder="Username" style="width:70%;">
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control" id="pwd" name="password" placeholder="password"  style="width:70%;">
-          </div>
-          <button type="submit" class="btn btn-primary my-modal-btn-login">Submit</button>
-          <div class="row my-modal-row-div">
-              <div class="col 6">
-                  
-                    <label class="form-check-label">
-        <input type="checkbox" class="form-check-input" value="">Remember Me
-                          </label> 
-
-              </div>
-              <div class="col 6">Forgot Password? </div>
-          </div>
-        </form>
-     </div>
-
-    </div>
-</div>
-</div>
-</div>
-<!-- new form end -->
-
-
-
-<!-- modal 15 -->
-<div class="container modal fade" id="myModal5" tabindex="-1" role="dialog" >
-
-        <div class="modal-dialog">
-        <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header modal-style">
-                    <div class="row" id="try-flex">
                    
-               <div class="col-12">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button
-                        ></div>
-                 
-           <div class="col-12">   
-               <h4 id="try-flex-text">Register</h4>
-            </div>
-                
-                        <form action="#" method="post">
 
-<div class="col-12">     
-      <input type="text" class="free-trial"  name="name" placeholder="Name" required="">
-</div>
+                    <button class="controls" id="next" title="Next Slide">&#10095</button>
 
-<div class="col-12">  
-     <input type="email" class="free-trial" name="email" placeholder="E-mail" required="">
-</div>
-                         
-<div class="col-12">   
-    <input type="password" class="free-trial" name="password" placeholder="Password" required="">
-</div>
-   
-<div class="col-12">  
-                  <input type="password" class="free-trial" name="conform password" placeholder="Confirm Password" required="">
-</div>
-                            
-                                <span class="agree-checkbox">
-                                   <span class="agree-checkbox"> <label class="">  
-                                        <input type="checkbox" name="checkbox">
-                                    </span>
-                                        I agree to your <a class="agree-text" href="#" target="_blank">Terms of Use</a> and <a class="agree-text" href="#" target="_blank">Privacy Policy</a></label>
-                                </span>
-
-               
-                
-                </form>
+                </div>
+                <!-- end of section -->
             </div>
         </div>
-    </div>
-</div>
-</div>
-
-     </header>
+    </header>
 
 
+    <div class="wrapper">
+        <div class="category-title">
+            <h2> Latest Release</h2>
 
-
-        
-   <!--- Meet the team -->
-   <section class="section section-categories">
-    <div class="container-fluid padding">
-        <div class="row welcome text-center">
-            <div class="col-12">
-                <h1 class="cat-heading">Categories</h1>
-
-        
-
-               </div>
-            </div>	
-            </div>     
-
-
-        <!--- Cards -->
-    
-        <div class="container padding">
-            <div class="row padding">
-                <div class="col-md-3">
-                    <div class="card">
-                        
-                        <img class="card-img-top img-thumbnail" src="images/m14.jpg">
-                        
-                        <div class="text-block"> 
-                            <h4 class="card-text">Action</h4>
-                        
-                        </div>
-                        <div class="card-body">
-                               
-                         <a href="#" class="btn-cat btn-outline-secondary collapsed" data-toggle="collapse" data-target="#demo">See Action</a>
-                           
-                        </div>
+        </div>
+        <div class="hailings-movie-card-wrapper ">
+            <div class="hailings-movie-card-content">
+                <div class="hailings-header-title">
+                    <h3>Avengers: End Game</h3>
+                </div>
+                <header class="hailings-movie-header">
+                    <div class="hailings-header-rating">
+                        <p>PG 13</p>
+                    </div>
+                    <div class="hailings-header-star">
+                        <i class="material-icons">
+                            star
+                        </i>
+                        <i class="material-icons">
+                            star_half
+                        </i>
+                        <i class="material-icons">
+                            star_border
+                        </i>
+                    </div>
+                </header>
+                <!-- Header contains the meta details of the movie -->
+                <section class="hailings-movie-thumb-sm">
+                    <img src="assets/images/avengers.jpg" alt="Avengers" srcset="" />
+                </section>
+            </div>
+            <!-- end of movie card -->
+            <div class="hailings-movie-card-content">
+                <div class="hailings-header-title">
+                    <h3>Shazam</h3>
+                </div>
+                <header class="hailings-movie-header">
+                    <div class="hailings-header-rating">
+                        <p>PG 13</p>
+                    </div>
+                    <div class="hailings-header-star">
+                        <i class="material-icons">
+                            star
+                        </i>
+                        <i class="material-icons">
+                            star_half
+                        </i>
+                        <i class="material-icons">
+                            star_border
+                        </i>
+                    </div>
+                </header>
+                <!-- Header contains the meta details of the movie -->
+                <section class="hailings-movie-thumb-sm">
+                    <img src="assets/images/shazam.jpg" alt="Avengers" srcset="" />
+                </section>
+            </div>
+            <!-- end of movie card -->
+            <div class="hailings-movie-card-content">
+                <div class="hailings-header-title">
+                    <h3>Spiderman: Far from Home</h3>
+                </div>
+                <div class="hailings-movie-header">
+                    <div class="hailings-header-rating">
+                        <p>PG 13</p>
+                    </div>
+                    <div class="hailings-header-star">
+                        <i class="material-icons">
+                            star
+                        </i>
+                        <i class="material-icons">
+                            star_half
+                        </i>
+                        <i class="material-icons">
+                            star_border
+                        </i>
                     </div>
                 </div>
-                   <div class="col-md-3">
-                        <div class="card">
-                            <img class="card-img-top img-thumbnail" src="images/h6.jpg">
-                            <div class="text-block"> 
-                                <h4 class="card-text">Romance</h4>
-                            
-                            </div>
-                            <div class="card-body">
-                            
-                                <a href="#" class="btn-cat btn-outline-secondary">See Romance</a>
-                            </div>
-                        </div>
+                <!-- Header contains the meta details of the movie -->
+                <section class="hailings-movie-thumb-sm">
+                    <img src="assets/images/spiderman.jpeg" alt="Avengers" srcset="" />
+                </section>
+            </div>
+            <!-- end of movie card -->
+            <div class="hailings-movie-card-content">
+                <div class="hailings-header-title">
+                    <h3>X-Men: dark Pheonix</h3>
+                </div>
+                <div class="hailings-movie-header">
+                    <div class="hailings-header-rating">
+                        <p>PG 13</p>
                     </div>
-        
-        
-                   <div class="col-md-3">
-                    <div class="card">
-                        <img class="card-img-top img-thumbnail" src="images/hr10.jpg">
-                        <div class="text-block"> 
-                            <h4 class="card-text">Horror</h4>
-                        
-                          </div>
-                        <div class="card-body">
-                            
-                            <a href="#" class="btn-cat btn-outline-secondary">See Horror</a>
-                        </div>
-                     </div>
-                   </div>
-                   <div class="col-md-3">
-                    <div class="card">
-                        <img class="card-img-top img-thumbnail" src="images/m2.jpg">
-                        <div class="text-block"> 
-                            <h4 class="card-text">Drama</h4>
-                        
-                          </div>
-                        <div class="card-body">
-                            
-                            <a href="#" class="btn-cat btn-outline-secondary">See Drama</a>
-                        </div>
-                     </div>
-                   </div>
-             
-                   <div class="col-md-3">
-                        <div class="card">
-                            <img class="card-img-top img-thumbnail" src="images/hr7.jpg">
-                            <div class="text-block"> 
-                                <h4 class="card-text">Thriller</h4>
-                            
-                              </div>
-                            <div class="card-body">
-                                <a href="#" class="btn-cat  btn-outline-secondary">See Thriller</a>
-                            </div>
-                         </div>
-                       </div>
-               
-                       <div class="col-md-3">
-                            <div class="card">
-                                <img class="card-img-top img-thumbnail" src="images/c8.jpg">
-                                <div class="text-block"> 
-                                    <h4 class="card-text">Comedy</h4>
-                                
-                                  </div>
-                                <div class="card-body">
-                                    <a href="#" class="btn-cat  btn-outline-secondary">See Comedy</a>
-                                </div>
-                             </div>
-                      </div>
-                      
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img class="card-img-top img-thumbnail" src="images/g2.jpg">
-                            <div class="text-block"> 
-                                <h4 class="card-text">Adventure</h4>
-                            
-                              </div>
-                            <div class="card-body">
-                                <a href="#" class="btn-cat  btn-outline-secondary">See Adventure</a>
-                            </div>
-                        </div>
-                  </div>  
+                    <div class="hailings-header-star">
+                        <i class="material-icons">
+                            star
+                        </i>
+                        <i class="material-icons">
+                            star_half
+                        </i>
+                        <i class="material-icons">
+                            star_border
+                        </i>
+                    </div>
+                </div>
+                <!-- Header contains the meta details of the movie -->
+                <section class="hailings-movie-thumb-sm">
+                    <img src="assets/images/darkpheonix.png" alt="Avengers" srcset="" />
+                </section>
+            </div>
+            <!-- end of movie card -->
+            <div class="hailings-movie-card-content">
+                <div class="hailings-header-title">
+                    <h3>Lion King</h3>
+                </div>
+                <div class="hailings-movie-header">
+                    <div class="hailings-header-rating">
+                        <p>PG 13</p>
+                    </div>
+                    <div class="hailings-header-star">
+                        <i class="material-icons">
+                            star
+                        </i>
+                        <i class="material-icons">
+                            star_half
+                        </i>
+                        <i class="material-icons">
+                            star_border
+                        </i>
+                    </div>
+                </div>
+                <!-- Header contains the meta details of the movie -->
+                <section class="hailings-movie-thumb-sm">
+                    <img src="assets/images/lionking.jpeg" alt="Avengers" srcset="" />
+                </section>
+            </div>
+            <!-- end of movie card -->
 
-                  <div class="col-md-3">
-                        <div class="card">
-                            <img class="card-img-top img-thumbnail" src="images/c2.jpg">
-                            <div class="text-block"> 
-                                <h4 class="card-text">Animation</h4>
-                            </div>
-                            <div class="card-body">
-                                <a href="#" class="btn-cat btn-outline-secondary">See Animation</a>
-                            </div>
-                        </div>
-                  </div>  
-               
-    
+
+        </div>
+        <!-- end of container section -->
+
+        <div class="category-title">
+            
+
         </div>
 
-                <!--- Meet the team -->
-        <section class="section section-plan">
+
+
+
+        <!--- Meet the team -->
+        <section class="section section-categories">
             <div class="container-fluid padding">
                 <div class="row welcome text-center">
                     <div class="col-12">
-                        <h1 class="plan-heading">Choose Plan </h1>
-                        
+                        <h1 class="cat-heading">Categories</h1>
+
+
+
                     </div>
                 </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="plan">
-                        <div class="inside-heading">Standard</div>
-                        <p class="plan-paragraph">Try any plan risk-free for 30 days and Downgrade or upgrade at any time.</p>
-                    </div>
-                    <div class="plan-list">
-                        <ul class="u-list">
-                          <li class="list">Watch on your laptop, TV, phone and tablet</li>  
-                          <li class="list">Unlimited movies and TV shows</li> 
-                          <li class="list">First month free</li> 
-                          <li class="list">Cancel anytime</li> 
-                        </ul>
-                        <strong>
-                         <div class="price">#3,000</div>
-                        </strong>
-                        <div class="btn-click">
-                         <a href="#" class="btn1">Select Plan</a>
-                        </div>
-                    </div>
+            </div>
 
-                </div>
 
-                <div class="col-sm-4">
-                        <div class="plan">
-                            <div class="inside-heading">Pro</div>
-                            <p class="plan-paragraph">Try any plan risk-free for 30 days and Downgrade or upgrade at any time.</p>
-                        </div>
-                        <div class="plan-list">
-                            <ul class="u-list">
-                              <li class="list">HD available</li>
-                              <li class="list">Watch on your laptop, TV, phone and tablet</li>  
-                              <li class="list">Unlimited movies and TV shows</li> 
-                              <li class="list">First month free</li> 
-                              <li class="list">Cancel anytime</li> 
-                            </ul>
-                            <strong>
-                             <div class="price">#5,000</div>
-                            </strong>
-                            <div class="btn-click">
-                                <a href="#" class="btn1">Select Plan</a>
+            <!--- Cards -->
+
+
+            <div class="container padding">
+                <div class="row padding">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top img-thumbnail" src="images/m14.jpg" />
+
+
+                            <div class="text-block">
+                                <h4 class="card-text">Action</h4>
+                            </div>
+                            <div class="card-body">
+                                <a href="#" class="btn  btn-outline-secondary collapsed" data-toggle="collapse"
+                                    data-target="#demo">See Action</a>
+                                <!-- <div id="demo" class="collapse coolDude">
+                            <h4>Timless</h4>
+                            <p>Release Date: May 2018</p>
+                            <p>Genres: Drama | Action </p>
+                            
+                                 
+                                </div> -->
                             </div>
                         </div>
-    
                     </div>
 
-                    <div class="col-sm-4">
-                            <div class="plan">
-                                <div class="inside-heading">Premium</div>
-                                <p class="plan-paragraph">Try any plan risk-free for 30 days and Downgrade or upgrade at any time.</p>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top img-thumbnail" src="images/h6.jpg" />
+                            <div class="text-block">
+                                <h4 class="card-text">Romance</h4>
                             </div>
-                            <div class="plan-list">
-                                <ul class="u-list">
-                                  <li class="list">Ultra HD available</li>
-                                  <li class="list">HD available</li>
-                                  <li class="list">Watch on your laptop, TV, phone and tablet</li>  
-                                  <li class="list">Unlimited movies and TV shows</li> 
-                                  <li class="list">First month free</li> 
-                                  <li class="list">Cancel anytime</li> 
-                                </ul>
-                                <strong>
-                                 <div class="price">#7,500</div>
-                                </strong>
-                                <div class="btn-click">
-                                    <a href="#" class="btn1">Select Plan</a>
+                            <div class="card-body">
+                                <a href="#" class="btn  btn-outline-secondary">See Romance</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top img-thumbnail" src="images/hr10.jpg" />
+                            <div class="text-block">
+                                <h4 class="card-text">Horror</h4>
+                            </div>
+                            <div class="card-body">
+                                <a href="#" class="btn  btn-outline-secondary">See Horror</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top img-thumbnail" src="images/m2.jpg" />
+                            <div class="text-block">
+                                <h4 class="card-text">Drama</h4>
+                            </div>
+                            <div class="card-body">
+                                <a href="#" class="btn  btn-outline-secondary">See Drama</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top img-thumbnail" src="images/hr7.jpg" />
+                            <div class="text-block">
+                                <h4 class="card-text">Thriller</h4>
+                            </div>
+                            <div class="card-body">
+                                <a href="#" class="btn  btn-outline-secondary">See Thriller</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top img-thumbnail" src="images/c8.jpg" />
+                            <div class="text-block">
+                                <h4 class="card-text">Comedy</h4>
+                            </div>
+                            <div class="card-body">
+                                <a href="#" class="btn  btn-outline-secondary">See Comedy</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top img-thumbnail" src="images/c2.jpg" />
+                            <div class="text-block">
+                                <h4 class="card-text">Adventure</h4>
+                            </div>
+                            <div class="card-body">
+                                <a href="#" class="btn  btn-outline-secondary">See Adventure</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                            <div class="card">
+                                <img class="card-img-top img-thumbnail" src="images/c2.jpg" />
+                                <div class="text-block">
+                                    <h4 class="card-text">Adventure</h4>
+                                </div>
+                                <div class="card-body">
+                                    <a href="#" class="btn  btn-outline-secondary">See Adventure</a>
                                 </div>
                             </div>
-        
-                    </div>
+                        </div>
+                   
+                </div>
+
+
+
+
+
+
+<!--- Cards -->
+
+
+<!--- Meet the team -->
+<section class="section section-plan">
+    <div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="plan-heading">Choose Plan </h1>
+
             </div>
-           </div>     
-        </section>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="plan">
+                    <div class="inside-heading">Standard</div>
+                    <p class="plan-paragraph">Try any plan risk-free for 30 days and Downgrade or upgrade at any time.
+                    </p>
+                </div>
+                <div class="plan-list">
+                    <ul class="u-list">
+                        <li class="list">Watch on your laptop, TV, phone and tablet</li>
+                        <li class="list">Unlimited movies and TV shows</li>
+                        <li class="list">First month free</li>
+                        <li class="list">Cancel anytime</li>
+                    </ul>
+                    <strong>
+                        <div class="price">#3,000</div>
+                    </strong>
+                    <div class="btn-click">
+                        <a href="#" class="btn1">Select Plan</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4">
+                <div class="plan">
+                    <div class="inside-heading">Pro</div>
+                    <p class="plan-paragraph">Try any plan risk-free for 30 days and Downgrade or upgrade at any time.
+                    </p>
+                </div>
+                <div class="plan-list">
+                    <ul class="u-list">
+                        <li class="list">HD available</li>
+                        <li class="list">Watch on your laptop, TV, phone and tablet</li>
+                        <li class="list">Unlimited movies and TV shows</li>
+                        <li class="list">First month free</li>
+                        <li class="list">Cancel anytime</li>
+                    </ul>
+                    <strong>
+                        <div class="price">#5,000</div>
+                    </strong>
+                    <div class="btn-click">
+                        <a href="#" class="btn1">Select Plan</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4">
+                <div class="plan">
+                    <div class="inside-heading">Premium</div>
+                    <p class="plan-paragraph">Try any plan risk-free for 30 days and Downgrade or upgrade at any time.
+                    </p>
+                </div>
+                <div class="plan-list">
+                    <ul class="u-list">
+                        <li class="list">Ultra HD available</li>
+                        <li class="list">HD available</li>
+                        <li class="list">Watch on your laptop, TV, phone and tablet</li>
+                        <li class="list">Unlimited movies and TV shows</li>
+                        <li class="list">First month free</li>
+                        <li class="list">Cancel anytime</li>
+                    </ul>
+                    <strong>
+                        <div class="price">#7,500</div>
+                    </strong>
+                    <div class="btn-click">
+                        <a href="#" class="btn1">Select Plan</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
 
 
-         <!-- Footer -->
-         <hr class="light">
-  <footer class="main-footer">
-        <div class="container">
-          <div class="row text-center">
-             
-             <div class="col-lg-3">
-         <a class="navbar-brand" href="#" id="footer-logo"> Hailing Cinema</a>   
-               </div>	
-            
- 
+<!-- Footer -->
+<hr class="light">
+<footer class="main-footer">
+    <div class="container inside-footer">
+        <div class="row text-center">
+
             <div class="col-lg-3">
-                  <h5>Hailings Cinema </h5> 
-                  <hr class="light">
-          <a href="#"><p class="p-text-footer">Pricing</p></a>
-          <a href="#"> <p class="p-text-footer">Upload</p></a>
-         <a href="#"> <p class="p-text-footer">Download</p></a>
-                  
-                  </div>	
-             
-            
- 
-             <div class="col-lg-3">
-                 <h5>Features</h5>
-                  <hr class="light">
-       <a href="#"><p class="p-text-footer">Free Trial</p></a>
-       <a href="#"><p class="p-text-footer">Sign Up</p></a>
-      <a href="#"><p class="p-text-footer">Help Center</p></a>
-                       
-               </div>     
-             
- 
-             <div class="col-lg-3">
-                 <h5>Follow Us </h5>
-                 <hr class="light">
- <a href="#"><i class="fab fa-twitter footer-awesome"></i></a>
- <a href="#"><i class="fab fa-instagram footer-awesome"></i><a href="#"></a>
- <a href="#"><i class="fab fa-facebook-f footer-awesome"></i></a>
- <a href="#"><i class="fab fa-youtube footer-awesome"></i></a>
- <a href="#"><i class="fab fa-google-plus-g footer-awesome"></i></a>
-                     
-             </div> 
-                 </div>
-                     </div>
- 
-     <div class="container lower-container">
-      <div class="row lower-row">
-      <p>&copy;2019 Hailing Cinema.All rights reserved. <span class="copyright-text">Terms</span>,<span class="copyright-text"> Privacy </span>& <span class="copyright-text"> Cookies </span>.</p>
-         </div>
-         <div>
-     <p>made with<span id="footer-entity"> &#10084;</span><span class="copyright-text"> by Group3 SGA 0.5</span></p>
-         </div>
-     </div>  
- </footer>
+                <a class="navbar-brand" href="#" id="footer-logo"> Hailing Cinema</a>
+            </div>
 
- 
-           
-        <script type="text/javascript" src="scripts/scrollme.js"></script>
 
-    </body>
+            <div class="col-lg-3">
+                <h3>Hailings Cinema </h3>
+                <hr class="light">
+                <a href="#">
+                    <p class="p-text-footer">Pricing</p>
+                </a>
+                <a href="#">
+                    <p class="p-text-footer">Upload</p>
+                </a>
+                <a href="#">
+                    <p class="p-text-footer">Download</p>
+                </a>
+
+            </div>
+
+
+
+            <div class="col-lg-3">
+                <h3>Features</h3>
+                <hr class="light">
+                <a href="#">
+                    <p class="p-text-footer">Free Trial</p>
+                </a>
+                <a href="#">
+                    <p class="p-text-footer">Sign Up</p>
+                </a>
+                <a href="#">
+                    <p class="p-text-footer">Help Center</p>
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-3">
+                <h3>Follow Us </h3>
+                <hr class="light">
+                <a href="#"><i id="awesome1"  class="fab fa-twitter"></i></a>
+                <a href="#"><i id="awesome2" class="fab fa-instagram"></i><a href="#"></a>
+                    <a href="#"><i id="awesome3" class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i id="awesome4" class="fab fa-youtube"></i></a>
+                    <a href="#"><i id="awesome5" class="fab fa-google-plus-g"></i></a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container lower-container">
+        <div class="row lower-row">
+            <p>&copy;2019 Hailing Cinema.All rights reserved. <span class="copyright-text">Terms</span>,<span
+                    class="copyright-text"> Privacy </span>& <span class="copyright-text"> Cookies </span>.</p>
+        </div>
+        <div>
+            <p>made with<span id="footer-entity"> &#10084;</span><span class="copyright-text"> by Group3 SGA 0.5</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript" src="scripts/scrollme.js"></script>
+<script src="assets/scripts/hailingcinema.js"></script>
+</body>
+
 </html>
