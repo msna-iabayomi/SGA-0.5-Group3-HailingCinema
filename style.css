@@ -3,6 +3,7 @@ html, body {
     width:100%;
     font-family:'Poiret One', cursive;
     color: #222;
+
   }
  
 .display-1{
@@ -299,6 +300,11 @@ ul li{
     cursor: pointer;
  
 }
+.search-input{
+    border: none transparent;
+outline: none;
+}
+
 a:hover{
 
     text-decoration: none!important;

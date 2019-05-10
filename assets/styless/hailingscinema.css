@@ -186,8 +186,8 @@ h6 {
 }
 
 .logo-text::first-letter{
-  color: #ec7e22;
-  font-size: 35px;
+    color: #ec7e22;
+    font-size: 35px;
 }
 
 /* 
@@ -537,7 +537,7 @@ End of SLide Styling */
   position: fixed;
   z-index: 11;
   top: 70px;
-  right: 0;l
+  right: 0;
   overflow: hidden;
   transition: 0.5s;
 
