@@ -6,20 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Hailings Cinema</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <script src="scripts/jquery.min.js"></script>
-    <script src="scripts/popper.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="scripts/all.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/styless/hailingscinema.css" />
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC|Roboto|Satisfy" rel="stylesheet" />
+    <link rel="icon" type="image/css" href="images/fivicon.jpg">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+   
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
 
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
         rel="stylesheet" />
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="assets/styless/hailingscinema.css" />
 
 </head>
 
@@ -102,15 +100,10 @@
                 </div>
                 <div class="logo">
                     <a href="index.html">
-                        <h1 class="logo-text"> Hailing Cinema</h1>
+                        <h1 class="logo-text" id="logo_text"> Hailing Cinema</h1>
                     </a>
                 </div>
-                <div class="search">
-                    <form action="">
-                        <input class="material-icons search-button "  type="submit" value="search" />
-                        <input class="seach-bar search-input" type="search" placeholder="Search for Movies " />
-                    </form>
-                </div>
+                <a href="search.html" class="search-link"><i class="fas fa-search"></i></a>
                 <div class="login">
                     <button class="reg-btn" onclick="openRegForm()">Sign Up</button>
                     <button class="login-btn" onclick="openInForm()">Login</button>
@@ -185,7 +178,7 @@
                                         Thousands of movies and TV shows. Available Anywhere. Always Free.
                                     </p>
                                     <button class="hero-btn"> <a href="single.html">Start Watching</a> </button>
-                                </div>
+                         </div>
                             </div>
                         </div>
                     </div>
@@ -198,7 +191,7 @@
 
                    
 
-                    <button class="controls" id="next" title="Next Slide">&#10095</button>
+                    <butt;;on class="controls" id="next"    title="Next Slide">&#10095</button>
 
                 </div>
                 <!-- end of section -->
@@ -235,8 +228,9 @@
                 </header>
                 <!-- Header contains the meta details of the movie -->
                 <section class="hailings-movie-thumb-sm">
+                  
                     <img src="assets/images/avengers.jpg" alt="Avengers" srcset="" />
-                </section>
+                <!-- </section> -->
             </div>
             <!-- end of movie card -->
             <div class="hailings-movie-card-content">
@@ -357,15 +351,16 @@
 
 
         <!--- Meet the team -->
-        <section class="section section-categories">
+        <div class="section section-categories" id="section-category">
             <div class="container-fluid padding">
                 <div class="row welcome text-center">
                     <div class="col-12">
-                        <h1 class="cat-heading">Categories</h1>
-
-
-
+                <h1 class="cat-heading">Categories</h1>
                     </div>
+                    <hr class="light">
+                <div class="col-12">
+                 <h2 class="cat-heading">Action</h2>
+                      </div>
                 </div>
             </div>
 
@@ -374,8 +369,12 @@
 
 
             <div class="container padding">
-                <div class="row padding">
-                    <div class="col-md-3">
+                <div class="row padding" id="movie-continer">
+                        <div  id="my_movies_1"></div>
+                        <div id="my_movies_2"></div>
+                        <div id="my_movies_3"></div>
+                        <div id="my_movies_4"></div>
+                    <!-- <div class="col-md-3">
                         <div class="card">
                             <img class="card-img-top img-thumbnail" src="images/m14.jpg" />
 
@@ -386,104 +385,37 @@
                             <div class="card-body">
                                 <a href="#" class="btn  btn-outline-secondary collapsed" data-toggle="collapse"
                                     data-target="#demo">See Action</a>
-                                <!-- <div id="demo" class="collapse coolDude">
-                            <h4>Timless</h4>
-                            <p>Release Date: May 2018</p>
-                            <p>Genres: Drama | Action </p>
-                            
+                             
                                  
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img class="card-img-top img-thumbnail" src="images/h6.jpg" />
-                            <div class="text-block">
-                                <h4 class="card-text">Romance</h4>
-                            </div>
-                            <div class="card-body">
-                                <a href="#" class="btn  btn-outline-secondary">See Romance</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img class="card-img-top img-thumbnail" src="images/hr10.jpg" />
-                            <div class="text-block">
-                                <h4 class="card-text">Horror</h4>
-                            </div>
-                            <div class="card-body">
-                                <a href="#" class="btn  btn-outline-secondary">See Horror</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img class="card-img-top img-thumbnail" src="images/m2.jpg" />
-                            <div class="text-block">
-                                <h4 class="card-text">Drama</h4>
-                            </div>
-                            <div class="card-body">
-                                <a href="#" class="btn  btn-outline-secondary">See Drama</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img class="card-img-top img-thumbnail" src="images/hr7.jpg" />
-                            <div class="text-block">
-                                <h4 class="card-text">Thriller</h4>
-                            </div>
-                            <div class="card-body">
-                                <a href="#" class="btn  btn-outline-secondary">See Thriller</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img class="card-img-top img-thumbnail" src="images/c8.jpg" />
-                            <div class="text-block">
-                                <h4 class="card-text">Comedy</h4>
-                            </div>
-                            <div class="card-body">
-                                <a href="#" class="btn  btn-outline-secondary">See Comedy</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img class="card-img-top img-thumbnail" src="images/g2.jpg" />
-                            <div class="text-block">
-                                <h4 class="card-text">Adventure</h4>
-                            </div>
-                            <div class="card-body">
-                                <a href="#" class="btn  btn-outline-secondary">See Adventure</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                            <div class="card">
-                                <img class="card-img-top img-thumbnail" src="images/c2.jpg" />
-                                <div class="text-block">
-                                    <h4 class="card-text">Animation</h4>
-                                </div>
-                                <div class="card-body">
-                                    <a href="#" class="btn  btn-outline-secondary">See Animation</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
+                
+                    </div>
+                <div class="col-12">
+                <h2 class="cat-heading text-center">Romance</h2>
+                 </div>
+                       
+                 
+                   <div class="row padding" id="new-set">
+
+                  </div>
+                  <div class="col-12">
+                    <h2 class="cat-heading text-center">Comdey</h2>
+                     </div>
+                
+                  <div class="row padding" id="new-set1">
+
+                </div>         
+           
+           
+           
+             </div> 
+                  
                    
-                </div>
+    </div>
 
-
+            
 
 
 
@@ -646,10 +578,25 @@
     </div>
 </footer>
 
-
-
-<script type="text/javascript" src="scripts/scrollme.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+     
+<script type="text/javascript" src="assets/scripts/scrollme.js"></script>
 <script src="assets/scripts/hailingcinema.js"></script>
-</body>
+<script>
 
+//   getMovies();
+  displayMovie1();
+  displayMovie2();
+  displayMovie3();
+  displayMovie4();
+  displayAll(["tt0437086","tt2274648", "tt6146586" ], "#movie-continer");
+  displayAll(["tt5977276", "tt6472976", "tt4126476" ], "#new-set");
+  displayAll(["tt8085790", "tt1979376", "tt6428676" ], "#new-set1");
+  
+</script>
+</body>
 </html>

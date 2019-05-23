@@ -1,11 +1,17 @@
 html, body {
     height: 100%;
     width:100%;
-    font-family:'Poiret One', cursive;
+    font-family: 'Indie Flower', cursive;
+    /* font-family:'Poiret One', cursive; */
     color: #222;
 
   }
  
+.search-link {
+    font-size: 50px;
+    margin-left: 40vh;
+}
+
 .display-1{
     font-size: 4rem;
     margin-bottom: 10rem;

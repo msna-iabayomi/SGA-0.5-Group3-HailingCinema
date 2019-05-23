@@ -69,7 +69,7 @@ function hailingsSlide() {
     if (playing) {
       pauseSlideshow();
     } else {
-      playSlideshow();
+      playSlideshow()
     }
   };
 
@@ -85,4 +85,6 @@ function hailingsSlide() {
     previousSlide();
   };
 }
+
+
 window.onload(hailingsSlide());
